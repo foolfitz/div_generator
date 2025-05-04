@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains div_generator.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function div_generator_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the div_generator module.
+    case 'help.page.div_generator':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Generate imgbox and right120') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function div_generator_theme() {
+  return [
+    'div_generator' => [
+      'render element' => 'children',
+    ],
+  ];
+}

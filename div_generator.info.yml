@@ -1,0 +1,7 @@
+name: 'Div generator'
+type: module
+description: 'Generate imgbox and right120'
+core_version_requirement: ^9 || ^10 || ^11
+#core: 8.x
+package: 'ckeditor'
+version: 1.0
